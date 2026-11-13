@@ -61,7 +61,7 @@ Urutan pertanyaan: (1) posisi jauh/terhalang, (2) sinyal lemah, (3) banyak peran
 | 3 | no. 3, 6, 7 | bandwidth terbagi terlalu banyak dan gangguan ISP |
 
 ### Kasus 1
-![Kasus 1](screenshot/kasus1.png)
+![Kasus 1](screenshoot/kasus1.png)
 
 ```
 Siklus 1: R1 -> sinyal WiFi bermasalah
@@ -73,7 +73,7 @@ ALASAN:
 ```
 
 ### Kasus 2 (negatif)
-![Kasus 2](screenshot/kasus2.png)
+![Kasus 2](screenshoot/kasus2.png)
 
 ```
 Siklus 1: tidak ada aturan baru, berhenti.
@@ -81,7 +81,7 @@ KESIMPULAN: penyebab belum dapat ditentukan dari jawaban Anda.
 ```
 
 ### Kasus 3
-![Kasus 3](screenshot/kasus3.png)
+![Kasus 3](screenshoot/kasus3.png)
 
 ```
 Siklus 1: R2 -> bandwidth terpakai banyak
