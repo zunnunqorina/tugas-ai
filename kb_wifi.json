@@ -1,0 +1,46 @@
+{
+  "judul": "Sistem Pakar Penyebab Gangguan WiFi di Rumah",
+  "batas": "Aturan berasal dari 3 panduan layanan TI universitas (Oklahoma State University, Clemson University, University of Wyoming) untuk WiFi rumahan dan hanya mencakup masalah sinyal, bandwidth, dan gangguan penyedia internet. Hasilnya saran awal, bukan keputusan akhir.",
+  "sumber": {
+    "S1": "Slow Internet or Network Performance: Diagnosing and Improving Slow Connections, Oklahoma State University IT, https://services.okstate.edu/TDClient/856/Portal/KB/Article/20802/Slow-Internet-or-Network-Performance-Diagnosing-and-Improving-Slow-Connections, diakses 13 Nov 2026",
+    "S2": "Troubleshooting Basic Problems with WIFI/Connection, Clemson University, https://forever.clemson.edu/di/self-service/connecting, diakses 13 Nov 2026",
+    "S3": "My Network Connection is Slow: Troubleshooting Slow Network, University of Wyoming IT, https://uwyo.teamdynamix.com/TDClient/1940/Portal/KB/PrintArticle?ID=143600, diakses 13 Nov 2026"
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": ["posisi Anda jauh dari router atau terhalang banyak dinding", "sinyal WiFi di perangkat Anda lemah"],
+      "mode": "atau",
+      "maka": "sinyal WiFi bermasalah",
+      "sumber": "S1, S2"
+    },
+    {
+      "id": "R2",
+      "jika": ["banyak perangkat sedang terhubung ke WiFi", "ada unduhan atau pembaruan besar yang sedang berjalan"],
+      "mode": "atau",
+      "maka": "bandwidth terpakai banyak",
+      "sumber": "S1"
+    },
+    {
+      "id": "R3",
+      "jika": ["sinyal WiFi bermasalah", "internet normal saat memakai kabel LAN"],
+      "mode": "dan",
+      "maka": "penyebab: sinyal WiFi lemah (saran: dekatkan perangkat atau pindahkan router)",
+      "sumber": "S2, S3"
+    },
+    {
+      "id": "R4",
+      "jika": ["bandwidth terpakai banyak", "internet lambat di semua perangkat"],
+      "mode": "dan",
+      "maka": "penyebab: bandwidth terbagi terlalu banyak (saran: putuskan perangkat yang tidak dipakai dan hentikan unduhan)",
+      "sumber": "S1"
+    },
+    {
+      "id": "R5",
+      "jika": ["internet lambat di semua perangkat", "masalah tetap ada setelah modem dan router di-restart"],
+      "mode": "dan",
+      "maka": "penyebab: gangguan dari penyedia internet (saran: hubungi ISP)",
+      "sumber": "S2"
+    }
+  ]
+}
